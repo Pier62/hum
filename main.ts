@@ -1,0 +1,11 @@
+basic.forever(function () {
+    basic.showNumber(pins.analogReadPin(AnalogPin.P0))
+    basic.clearScreen()
+    basic.pause(500)
+    basic.showNumber(pins.analogReadPin(AnalogPin.P1))
+    basic.clearScreen()
+    basic.pause(500)
+    basic.showIcon(IconNames.Square)
+    basic.clearScreen()
+    pins.analogWritePin(AnalogPin.P9, Math.map(50, 0, 100, 0, 1023))
+})
